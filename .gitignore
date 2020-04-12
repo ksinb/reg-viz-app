@@ -90,4 +90,7 @@ sw.*
 *.swp
 
 # storybook build output
-storybook-static/
+storybook-static
+.reg
+__screenshots__
+regconfig.json
