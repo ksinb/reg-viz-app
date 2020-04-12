@@ -4,6 +4,7 @@
 
 <style scoped>
 .hoge {
-  background: red;
+  background: blue;
+  height: 100px;
 }
 </style>
