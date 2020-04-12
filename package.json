@@ -15,6 +15,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "screenshot": "storycap --serverCmd \"start-storybook -p 6006\" http://localhost:6006",
+    "regression:test": "reg-suit compare",
     "regression": "reg-suit run"
   },
   "lint-staged": {
