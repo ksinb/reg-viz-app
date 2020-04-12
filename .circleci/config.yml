@@ -19,7 +19,7 @@ jobs:
             - ~/workspace/node_modules
       - run:
           name: install jp fonts
-          command: sudo apt-get install fonts-ipafont-gothic fonts-ipafont-mincho
+          command: apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -y sudo
       - run:
           name: screenshots
           command: yarn screenshot
