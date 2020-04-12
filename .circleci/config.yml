@@ -1,5 +1,9 @@
+version: 2.1
 jobs:
-  visual_regression:
+  build:
+    docker:
+      - image: node:12
+
     steps:
       - checkout
       - restore_cache:
