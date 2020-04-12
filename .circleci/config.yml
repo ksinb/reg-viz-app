@@ -1,0 +1,24 @@
+jobs:
+  visual_regression:
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules
+          key: yarn-{{ checksum "yarn.lock" }}-{{ .Environment.CACHE_VERSION_NPM }}
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          name: Cache node_modules
+          key: yarn-{{ checksum "yarn.lock" }}-{{ .Environment.CACHE_VERSION_NPM }}
+          paths:
+            - ~/workspace/node_modules
+      - run:
+          name: install jp fonts
+          command: sudo apt-get install fonts-ipafont-gothic fonts-ipafont-mincho
+      - run:
+          name: screenshots
+          command: yarn screenshot
+      - run:
+          name: regression
+          command: yarn regression --quiet
