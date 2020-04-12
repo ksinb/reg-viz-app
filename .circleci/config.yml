@@ -18,9 +18,6 @@ jobs:
           paths:
             - ~/workspace/node_modules
       - run:
-          name: install jp fonts
-          command: apt-get install fonts-ipafont-gothic fonts-ipafont-mincho -y sudo
-      - run:
           name: screenshots
           command: yarn screenshot
       - run:
