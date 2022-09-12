@@ -1,6 +1,6 @@
 # reg-viz-app
 
-> My magnificent Nuxt.js project
+> Your magnificent Nuxt.js project
 
 ## Build Setup
 
